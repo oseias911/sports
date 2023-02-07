@@ -1,0 +1,33 @@
+:root{
+  --width-button: 40px;
+  --background-Button:#0F2D37;
+  --background-Button-hover:#00141E;
+  --background-Button-active:#0F2D37;
+  --color-button:#F1F1F1; 
+}
+
+.container_button_toggle{
+  width: var(--width-button);
+  height: var(--width-button);
+  background-color: var(--background-Button);
+  border-radius: 0.3rem;
+  transition:  all 0.3s ease-in-out; 
+  cursor: pointer;
+  color: var(--color-button);
+  overflow: hidden;
+  position: fixed;
+  top: 0.8rem;
+  right: 0.5rem;
+  display: flex;
+  z-index: 999;
+}
+
+.container_button_toggle:hover{
+  background-color: var(--background-Button-hover);
+}
+
+@media (min-width: 1024px){
+  .container_button_toggle{
+   display: none;
+  }
+}

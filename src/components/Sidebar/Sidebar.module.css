@@ -1,0 +1,41 @@
+.container_sidebar{
+  width: 100%;
+  max-width: 220px;
+  min-width: 200px;
+  max-height: 100vh;
+  min-height: 100vh;
+  background-color:#fff;
+  padding: 1rem 0.5rem;
+  display: none;
+  margin: 0.5rem;
+  border-radius: 0.2rem;
+  box-shadow: 0 0 0.5rem 0.1rem rgba(0,0,0,0.1);
+  transition: all 0.3s ease-in;
+  animation-duration: 0.3s;
+  animation-fill-mode: both;
+  animation-name: animate__backInLeft;
+  z-index: 1;
+}
+
+
+ @keyframes animate__backInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-300px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.container_sidebar.active{
+  display: flex !important;
+  transition: all 0.3s ease-in;
+}
+
+@media (min-width: 1024px) {
+  .container_sidebar{
+    display: flex;
+  }
+}
